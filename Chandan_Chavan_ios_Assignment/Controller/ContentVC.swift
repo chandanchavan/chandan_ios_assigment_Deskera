@@ -19,24 +19,11 @@ class ContentVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = strTitle
-        NetworkManager.sharedInstance.getItemsData { (response, error) in
-            guard let jsondata = response as? [String :AnyObject] else {
-                return
-            }
-            if let data = jsondata["users"] as? [[String : Any]]
-            {
-                for user  in data {
-                    let obj = ItemDataModel(jsonObject: user as [String : AnyObject])
-                    self.arrOFUserData.append(obj)
-                }
-            }
-            
-            DispatchQueue.main.async {
-                self.tableView .reloadData()
-                
-            }
-        }
+        //nameLabel.text = strTitle
+                    DispatchQueue.main.async {
+                        self.tableView .reloadData()
+        
+                    }
     }
 
 }

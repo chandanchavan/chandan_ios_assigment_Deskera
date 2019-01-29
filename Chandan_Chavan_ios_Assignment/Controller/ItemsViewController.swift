@@ -13,10 +13,11 @@ class ItemsViewController: UIViewController {
     var pageController: UIPageViewController!
     var currentIndex: Int = 0
     var tabs = ["All","Category A","Category B"]
+    var arrOFUserData:[ItemDataModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        
+        self.getItemData()
         
         menuBarView.dataArray = tabs
         menuBarView.isSizeToFitCellsNeeded = true
@@ -32,6 +33,23 @@ class ItemsViewController: UIViewController {
         menuBarView.collView.selectItem(at: IndexPath.init(item: 0, section: 0), animated: true, scrollPosition: .centeredVertically)
         pageController.setViewControllers([viewController(At: 0)!], direction: .forward, animated: true, completion: nil)
     }
+    func getItemData() -> Void {
+        NetworkManager.sharedInstance.getItemsData { (response, error) in
+            guard let jsondata = response as? [String :AnyObject] else {
+                return
+            }
+            if let data = jsondata["Items"] as? [[String : Any]]
+            {
+                for user  in data {
+                    let obj = ItemDataModel(jsonObject: user as [String : AnyObject])
+                    self.arrOFUserData.append(obj)
+                }
+            }
+            
+
+        }
+    }
+    
     func presentPageVCOnView() {
         
         self.pageController = storyboard?.instantiateViewController(withIdentifier: "PageControllerVC") as! PageControllerVC
