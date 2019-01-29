@@ -1,0 +1,89 @@
+
+{
+    "users" : [
+        {
+            "username" :"chandan ",
+            "email" :"chandanchavan25@gmail.com",
+            "dateOfJoining" :"01/01/2019 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2019",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2019",
+            "probationlength" :"more than 6 months"
+        },
+        {
+            "username" :"Ganesh ",
+            "email" :"ganesh@gmail.com",
+            "dateOfJoining" :"01/01/2018 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2018",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2018",
+            "probationlength" :"more than 6 months"
+        },
+        {
+            "username" :"Rushikesh ",
+            "email" :"Rushikesh@gmail.com",
+            "dateOfJoining" :"01/01/2018 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2018",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2018",
+            "probationlength" :"more than 6 months"
+        },
+        {
+            "username" :"Somnath ",
+            "email" :"somnath@gmail.com",
+            "dateOfJoining" :"01/01/2018 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2018",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2018",
+            "probationlength" :"more than 6 months",
+        },
+        {
+            "username" :"Yogesh ",
+            "email" :"yogesh@gmail.com",
+            "dateOfJoining" :"01/01/2018 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2018",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2018",
+            "probationlength" :"more than 6 months"
+        },
+        {
+            "username" :"Vijay ",
+            "email" :"vijay@gmail.com",
+            "dateOfJoining" :"01/01/2018 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2018",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2018",
+            "probationlength" :"more than 6 months",
+        },
+        {
+            "username" :"Sachin ",
+            "email" :"sachin@gmail.com",
+            "dateOfJoining" :"01/01/2018 ",
+            "temeratureDisplayUnit" :"Celcius",
+            "sound" :"true",
+            "notification" :"true",
+            "dateProbationEnds" :"30/06/2018",
+            "probationDuration" :"5 months 10 days",
+            "dateBecomePerment" :"1/07/2018",
+            "probationlength" :"more than 6 months",
+        }
+    ]
+}
