@@ -53,10 +53,10 @@ class ItemsViewController: UIViewController {
     func presentPageVCOnView() {
         
         self.pageController = storyboard?.instantiateViewController(withIdentifier: "PageControllerVC") as! PageControllerVC
-        self.pageController.view.frame = CGRect.init(x: 0, y: menuBarView.frame.maxY+50, width: self.view.frame.width, height: self.view.frame.height - menuBarView.frame.maxY)
-        self.addChild(self.pageController)
+        self.pageController.view.frame = CGRect.init(x: 0, y: menuBarView.frame.maxY+25, width: self.view.frame.width, height: self.view.frame.height - menuBarView.frame.maxY)
+        self.addChildViewController(self.pageController)
         self.view.addSubview(self.pageController.view)
-        self.pageController.didMove(toParent: self)
+        self.pageController.didMove(toParentViewController: self)
         
     }
     
@@ -72,6 +72,20 @@ class ItemsViewController: UIViewController {
         contentVC.strTitle = tabs[index]
         contentVC.pageIndex = index
         currentIndex = index
+        
+        switch index {
+        case 0:
+            contentVC.dataArr = arrOFUserData
+        case 1:
+            contentVC.dataArr = arrOFUserData.filter({($0.categories.localizedCaseInsensitiveContains("Category A"))})
+            print(contentVC.dataArr)
+        case 2:
+            contentVC.dataArr = arrOFUserData.filter({($0.categories.localizedCaseInsensitiveContains("Category B"))})
+        default:
+             contentVC.dataArr = arrOFUserData
+        }
+        
+
         return contentVC
         
     }

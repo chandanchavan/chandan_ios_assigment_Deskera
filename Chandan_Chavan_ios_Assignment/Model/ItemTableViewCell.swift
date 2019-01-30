@@ -9,10 +9,13 @@
 import UIKit
 
 class ItemTableViewCell: UITableViewCell {
-
+ @IBOutlet weak var lblTitle: UILabel!
+ @IBOutlet weak var backgroundCellView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundCellView?.layer.cornerRadius = 8.0
+        self.backgroundCellView?.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -12,7 +12,10 @@ class FavouriteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var btnCheck: UIButton!
+    
     @IBOutlet weak var backgroundCellView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,14 +28,10 @@ class FavouriteTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setData(data : ItemDataModel) -> Void {
-        if data.name != ""
-        {
-            self.lblName.text = data.name
-        }
-        else{
-            self.lblName.text = data.description
-        }
         
+            self.lblName.text = data.name
+            self.descLabel.text = data.discription
+            self.categoryLabel.text = data.categories
         self.backgroundCellView?.layer.cornerRadius = 8.0
         self.backgroundCellView?.layer.masksToBounds = true
         
